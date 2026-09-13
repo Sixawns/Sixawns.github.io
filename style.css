@@ -91,7 +91,8 @@ a:hover {
   font-size: 18px;
   padding: 14px 36px;
 }
-/* 过场图 */
+
+/* 过场图：只有 page3 会用到 */
 .cover {
   position: fixed;
   top: 0;
@@ -124,12 +125,13 @@ a:hover {
     pointer-events: none;
   }
 }
-body {
-animation: bodyIn 0s ease-out 2s both;}
+
+/* 内容淡入：只对带 page3 类的页面生效 */
+body.page3 {
+  animation: bodyIn 0s ease-out 2s both;
+}
 
 @keyframes bodyIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-
-
