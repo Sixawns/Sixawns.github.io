@@ -1,0 +1,93 @@
+/* 全局样式 */
+body {
+  background: #0f0f0f;
+  color: #e0e0e0;
+  font-family: "Microsoft YaHei", sans-serif;
+  text-align: center;
+  padding-top: 15vh;
+}
+
+/* 大标题 */
+h1 {
+  font-size: 64px;
+  letter-spacing: 4px;
+  color: #7ef;
+}
+
+/* 正文段落 */
+p {
+  font-size: 18px;
+  color: #888;
+}
+
+/* 按钮通用样式 */
+a {
+  display: block;
+  width: fit-content;
+  margin: 30px auto 0;
+  padding: 12px 28px;
+  background: #7ef;
+  color: #0f0f0f;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* 鼠标悬停效果 */
+a:hover {
+  background: #4cd;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* 卡片容器 */
+.card {
+  width: 320px;
+  margin: 30px auto 0;
+  padding: 20px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* 卡片标题 */
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: #7ef;
+}
+
+/* 卡片正文 */
+.card p {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* 状态那行 */
+.card .status {
+  color: #666;
+  font-size: 13px;
+}
+
+/* 卡片里的小链接 */
+.mini-link {
+  display: inline;
+  width: auto;
+  margin: 0 0 0 6px;
+  padding: 2px 8px;
+  font-size: 12px;
+  background: transparent;
+  border: 1px solid #7ef;
+  color: #7ef;
+  border-radius: 4px;
+}
+
+/* 主按钮，大一点 */
+.btn-main {
+  font-size: 18px;
+  padding: 14px 36px;
+}
