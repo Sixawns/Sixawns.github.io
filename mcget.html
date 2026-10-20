@@ -48,20 +48,6 @@
   </div>
 
   <div class="wide">
-    <h2>命令行</h2>
-    <pre class="code">python mcget.py list --mirror          # 看看有哪些版本
-python mcget.py download 1.20.1 --mirror
-python mcget.py download 1.20.1 --mirror --dir D:/Minecraft/.minecraft
-
-python mcget.py fabric 1.20.1          # 版本留空 = 最新稳定版
-python mcget.py quilt 1.20.1
-python mcget.py forge 1.20.1 47.4.13
-python mcget.py neoforge 1.21.1</pre>
-    <p class="txt">命令行下也会显示实时进度：</p>
-    <pre class="code">[ 42%] 74.3 MB / 180.5 MB | 文件 512/1234 | 3.2 MB/s | 剩余 33 秒</pre>
-  </div>
-
-  <div class="wide">
     <h2>界面能做的事</h2>
     <ul class="list">
       <li><b>MC 版本</b> 下拉框选，勾「显示测试版」会多出快照版本</li>
@@ -74,24 +60,6 @@ python mcget.py neoforge 1.21.1</pre>
     </ul>
     <p class="txt">版本都留空就自动选最新的，不用查版本号。
       鼠标停在任意选项上，底部会显示它是干什么的。</p>
-  </div>
-
-  <div class="wide">
-    <h2>打包成 exe</h2>
-    <p class="txt">Windows 上双击 build_exe.bat，自动建虚拟环境、装依赖、打包：</p>
-    <pre class="code">dist\mcget.exe      图形界面，双击即用
-dist\mcget-cli.exe  命令行版</pre>
-    <p class="txt small">别用裸命令 pyinstaller -F -w mcget_gui.py。
-      customtkinter 没有官方 hook，主题 json 和字体会漏掉，打出来的 exe 双击直接崩。走 spec 才对。</p>
-  </div>
-
-  <div class="wide">
-    <h2>分层</h2>
-    <pre class="code">mcget.py ──(两个回调)──> mcget_gui.py
- 下载逻辑                  界面
- 不认识界面                不碰下载细节</pre>
-    <p class="txt">界面只通过两个 hook 订阅事件，两边互不依赖。
-      想换界面（Qt / 网页套壳），只需重写 mcget_gui.py，mcget.py 一行不动。</p>
   </div>
 
   <div class="wide note-box">

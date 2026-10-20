@@ -218,25 +218,18 @@ body.page3 {
   line-height: 1.75;
 }
 
-.wide .txt.small {
-  font-size: 13px;
-  color: #888;
-}
-
-/* 代码块 */
+/* 行内代码 / 小段等宽文本 */
 .code {
-  margin: 10px 0;
-  padding: 14px 16px;
+  display: inline-block;
+  margin: 6px 0;
+  padding: 3px 8px;
   background: #101010;
   border: 1px solid #2a2a2a;
-  border-radius: 6px;
+  border-radius: 4px;
   font-family: Consolas, "Courier New", monospace;
   font-size: 13px;
-  line-height: 1.7;
   color: #9fe;
-  white-space: pre-wrap;
   word-break: break-all;
-  overflow-x: auto;
 }
 
 /* 特性两列网格 */
