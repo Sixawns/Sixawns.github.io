@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MCget - Sixawns</title>
+  <link rel="icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="page-title">MCget</h1>
+  <p class="lead">Minecraft 版本下载器 —— 只下载，不启动</p>
+
+  <div class="wide">
+    <h2>它做什么</h2>
+    <p class="txt">把某个版本的完整文件拉到本地，交给 PCL / HMCL 启动。
+      不碰账号、不破解、不绕过任何验证。</p>
+  </div>
+
+  <div class="wide">
+    <h2>特性</h2>
+    <div class="grid">
+      <div class="feat">
+        <p class="feat-t">零依赖核心</p>
+        <p class="feat-d">mcget.py 只用 Python 标准库</p>
+      </div>
+      <div class="feat">
+        <p class="feat-t">四个加载器</p>
+        <p class="feat-d">Forge / NeoForge / Fabric / Quilt</p>
+      </div>
+      <div class="feat">
+        <p class="feat-t">断点续传</p>
+        <p class="feat-d">已下好的自动跳过，断了重跑接着下</p>
+      </div>
+      <div class="feat">
+        <p class="feat-t">SHA1 校验</p>
+        <p class="feat-d">校验通过才写盘，损坏自动重下</p>
+      </div>
+      <div class="feat">
+        <p class="feat-t">多线程</p>
+        <p class="feat-d">实时速度、剩余时间、字节级百分比</p>
+      </div>
+      <div class="feat">
+        <p class="feat-t">图形界面</p>
+        <p class="feat-d">CustomTkinter，随时停止</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wide">
+    <h2>命令行</h2>
+    <pre class="code">python mcget.py list --mirror          # 看看有哪些版本
+python mcget.py download 1.20.1 --mirror
+python mcget.py download 1.20.1 --mirror --dir D:/Minecraft/.minecraft
+
+python mcget.py fabric 1.20.1          # 版本留空 = 最新稳定版
+python mcget.py quilt 1.20.1
+python mcget.py forge 1.20.1 47.4.13
+python mcget.py neoforge 1.21.1</pre>
+    <p class="txt">命令行下也会显示实时进度：</p>
+    <pre class="code">[ 42%] 74.3 MB / 180.5 MB | 文件 512/1234 | 3.2 MB/s | 剩余 33 秒</pre>
+  </div>
+
+  <div class="wide">
+    <h2>界面能做的事</h2>
+    <ul class="list">
+      <li><b>MC 版本</b> 下拉框选，勾「显示测试版」会多出快照版本</li>
+      <li><b>游戏目录</b> 填你的 .minecraft，一般就是 PCL / HMCL 在用的那个</li>
+      <li><b>国内加速镜像</b> 国内开着快很多，人在国外可以关</li>
+      <li><b>同时下载</b> 同时下几个文件，16 左右比较稳</li>
+      <li><b>加载器</b> Fabric / Quilt / Forge / NeoForge 四选一</li>
+      <li><b>进度</b> 百分比、已下/总量、实时速度、剩余时间</li>
+      <li><b>停止</b> 随时打断，下好的文件留着，再点一次接着下</li>
+    </ul>
+    <p class="txt">版本都留空就自动选最新的，不用查版本号。
+      鼠标停在任意选项上，底部会显示它是干什么的。</p>
+  </div>
+
+  <div class="wide">
+    <h2>打包成 exe</h2>
+    <p class="txt">Windows 上双击 build_exe.bat，自动建虚拟环境、装依赖、打包：</p>
+    <pre class="code">dist\mcget.exe      图形界面，双击即用
+dist\mcget-cli.exe  命令行版</pre>
+    <p class="txt small">别用裸命令 pyinstaller -F -w mcget_gui.py。
+      customtkinter 没有官方 hook，主题 json 和字体会漏掉，打出来的 exe 双击直接崩。走 spec 才对。</p>
+  </div>
+
+  <div class="wide">
+    <h2>分层</h2>
+    <pre class="code">mcget.py ──(两个回调)──> mcget_gui.py
+ 下载逻辑                  界面
+ 不认识界面                不碰下载细节</pre>
+    <p class="txt">界面只通过两个 hook 订阅事件，两边互不依赖。
+      想换界面（Qt / 网页套壳），只需重写 mcget_gui.py，mcget.py 一行不动。</p>
+  </div>
+
+  <div class="wide note-box">
+    <h2>声明</h2>
+    <ul class="list">
+      <li>不分发任何游戏内容，只从 Mojang 官方或 BMCLAPI 公开镜像获取</li>
+      <li>与 Mojang Studios / Microsoft / BMCLAPI 无从属关系</li>
+      <li>代码按 MIT 授权，但游戏文件不在此列</li>
+      <li>仅供已通过官方渠道购买 Minecraft 的用户下载自己有授权的文件</li>
+    </ul>
+  </div>
+
+  <a href="https://github.com/Sixawns/MCget" target="_blank" class="btn-main">在 GitHub 查看</a>
+  <a href="index.html" class="btn-second">返回主页</a>
+</body>
+</html>

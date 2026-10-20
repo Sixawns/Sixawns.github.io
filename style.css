@@ -171,3 +171,122 @@ body.page3 {
   border: 1px solid #2a2a2a;
   border-radius: 4px;
 }
+
+/* 项目条目里的链接行 */
+.card .proj-links {
+  margin: 8px 0 0;
+}
+
+/* ===== 以下为 MCget 展示页新增部分 ===== */
+
+/* 展示页标题，比首页 h1 小一号 */
+.page-title {
+  font-size: 46px;
+}
+
+/* 副标题 */
+.lead {
+  margin: 10px auto 0;
+  max-width: 520px;
+  font-size: 16px;
+  color: #888;
+  line-height: 1.7;
+}
+
+/* 宽卡片：比首页 320px 的 .card 宽，放得下代码块 */
+.wide {
+  max-width: 620px;
+  margin: 26px auto 0;
+  padding: 22px 26px;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.wide h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #7ef;
+}
+
+/* 宽卡片正文：覆盖全局 p 的居中与字号 */
+.wide .txt {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.75;
+}
+
+.wide .txt.small {
+  font-size: 13px;
+  color: #888;
+}
+
+/* 代码块 */
+.code {
+  margin: 10px 0;
+  padding: 14px 16px;
+  background: #101010;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #9fe;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+}
+
+/* 特性两列网格 */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.feat {
+  flex: 1 1 240px;
+  padding: 12px 14px;
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+}
+
+.feat-t {
+  margin: 0 0 4px;
+  font-size: 15px;
+  color: #7ef;
+}
+
+.feat-d {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #999;
+}
+
+/* 列表 */
+.wide .list {
+  margin: 8px 0;
+  padding-left: 20px;
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.85;
+}
+
+.wide .list b {
+  color: #7ef;
+  font-weight: 600;
+}
+
+/* 声明区块：弱化处理，不抢戏 */
+.note-box {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.note-box .list {
+  font-size: 13px;
+  color: #888;
+}
