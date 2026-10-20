@@ -135,3 +135,39 @@ body.page3 {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+/* ===== 以下为项目条目新增部分 ===== */
+
+/* 项目条目：带一条上分隔线 */
+.card .proj {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #2a2a2a;
+}
+
+/* 项目名 */
+.card .proj-name {
+  margin: 0 0 4px;
+  font-size: 17px;
+  color: #7ef;
+}
+
+/* 项目描述 */
+.card .proj-desc {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+/* 技术标签（用 span，避免被全局 a 样式撑成按钮） */
+.tag {
+  display: inline-block;
+  margin: 4px 3px 0 0;
+  padding: 2px 9px;
+  font-size: 11px;
+  color: #7ef;
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+}
